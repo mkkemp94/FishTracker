@@ -2,6 +2,7 @@ package com.accutime.mkemp.fishtracker.main;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.accutime.mkemp.fishtracker.R;
 
@@ -22,5 +23,18 @@ public class MainActivity extends AppCompatActivity implements MainContract.MvpV
         setContentView(R.layout.activity_main);
 
         mPresenter = new MainPresenter(this);
+    }
+
+    ////////        MVP View Methods
+
+    @Override
+    public void showSignInScreen() {
+        Toast.makeText(this, "Taking user to the sign in screen", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void showSignUpScreen() {
+        Toast.makeText(this, "Taking user to the sign up screen", Toast.LENGTH_SHORT).show();
+
     }
 }

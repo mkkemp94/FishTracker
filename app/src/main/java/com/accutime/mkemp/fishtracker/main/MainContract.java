@@ -7,9 +7,12 @@ package com.accutime.mkemp.fishtracker.main;
  */
 public interface MainContract {
     interface MvpView {
-
+        void showSignInScreen();
+        void showSignUpScreen();
     }
     interface Presenter {
-
+        // Almost always void
+        void handleSignInButtonClick();
+        void handleSignUpButtonClick();
     }
 }
